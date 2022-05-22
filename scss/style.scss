@@ -1,0 +1,195 @@
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+$blue: #2176FF;
+$white: #F8F7FF;
+$yellow: #F9DF74;
+$black: #2C363F;
+
+$font-base: 'Montserrat';
+$font-special: 'Roboto Condensed';
+$font-unique: 'Smooch';
+
+/*mobile*/
+
+
+.header{
+    margin-top: 0;
+    padding-bottom: 12%;
+    
+}
+
+h1{
+    color: $black;
+    padding-top: 5%;
+    font-family: $font-special;
+    font-size: 25px;
+    margin: 3% 10% 0% 10%;
+    font-style: italic;
+}
+
+h2{
+    color: $black;
+    font-family: $font-special;
+    font-size: 18px;
+    padding-top: 2%;
+    margin-left: 10%;
+}
+
+footer{
+    text-align: center;
+    margin: 10px 15px;
+    font-size: 12px;
+    font-family: $font-special;
+}
+.table{
+    border-spacing: 0;
+    text-align: left;
+    padding: 5%;
+    margin:auto;
+    
+}
+
+th,
+td{
+    border-bottom: 0.5px solid $black;
+    padding: 2%;
+}
+
+.price{
+    text-align: right;
+    padding-left: 10px;
+    margin: auto;
+
+}
+
+.yellow {
+    background-color: $yellow;
+    padding-bottom: 2.5%;
+}
+
+p{
+    padding: 0% 5%;
+}
+
+.potrubi, .certificate, .portret, .gas, .bottle, .coffee{
+    width: 100%;
+    padding:0;
+    margin: 0;
+}
+
+body{
+    font-family: $font-base;
+    color: $black;
+    background-color: $white;
+    padding: 20px 10px;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    width: 20%;
+    position: absolute;
+    right: 3%;
+    top: 1%;
+}
+
+li{
+    list-style-type: none;
+    padding: 1%;
+}
+
+ul{
+    padding: 0% 5%;
+}
+
+.menu{
+    margin-top: 15%;
+    margin-left: 10%;
+    font-size: $font-special;
+}
+.menu__checkbox{
+    position: absolute;
+    left: -9999px;
+}
+.menu__toggler{
+    cursor: pointer;
+}
+
+.menu__list{
+    display:none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $white;
+}
+
+.menu__link{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color:$black;
+    margin-right: 15%;
+}
+
+.menu__link:hover{
+    background-color: $yellow;
+}
+
+.menu__checkbox:checked ~ .menu__list{
+    display: block;
+}
+
+
+
+/*PC*/
+@media screen and (min-width: 640px) {
+    .menu__toggler{
+        display: none;
+    }
+    .menu__list{
+        display: flex !important;
+    }
+    .menu__link{
+        padding: 25px;
+
+    }
+
+    .logo{
+        width:6.5%;
+
+    }
+        
+    .header{
+        display: flex;
+        padding-bottom: 0;
+        
+
+    }
+    .gas, .bottle, .coffee{
+        width: 50%;
+        padding:0;
+        margin: 0;
+    
+    }
+    .potrubi, .portret, .certificate{
+        width: 55%;
+        margin: auto;
+    }
+
+    .portret, .certificate{
+    width: 55%;
+    margin: auto;
+}
+
+.yellow{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    padding-bottom: 0;
+
+}
+
+}
