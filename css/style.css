@@ -1,31 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
 /*mobile*/
 .header {
   margin-top: 0;
   padding-bottom: 12%;
 }
 
-h1 {
+.title {
   color: #2C363F;
-  padding-top: 5%;
-  font-family: "Roboto Condensed";
+  padding-top: 5px;
+  font-family: Roboto Condensed;
   font-size: 25px;
-  margin: 3% 10% 0% 10%;
+  margin: 0% 10%;
   font-style: italic;
+  padding-bottom: 5px;
 }
 
 h2 {
   color: #2C363F;
-  font-family: "Roboto Condensed";
+  font-family: Roboto Condensed;
   font-size: 18px;
-  padding-top: 2%;
   margin-left: 10%;
+  padding-top: 15px;
 }
 
 footer {
   text-align: center;
   margin: 10px 15px;
   font-size: 12px;
-  font-family: "Roboto Condensed";
+  font-family: Roboto Condensed;
 }
 
 .table {
@@ -47,23 +58,43 @@ td {
   margin: auto;
 }
 
-.yellow {
+.yellow,
+.homepage,
+.contact {
   background-color: #F9DF74;
-  padding-bottom: 2.5%;
+  padding-bottom: 5px;
+}
+
+.homepage__box,
+.aboutme__box1,
+.contact__box1,
+.contact__box2 {
+  padding-top: 5px;
+}
+
+.services__items {
+  text-align: left;
 }
 
 p {
   padding: 0% 5%;
+  line-height: 25px;
 }
 
-.potrubi, .certificate, .portret, .gas, .bottle, .coffee {
+.potrubi,
+.certificate,
+.portret,
+.gas,
+.bottle,
+.coffee,
+.calling {
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: Montserrat;
   color: #2C363F;
   background-color: #F8F7FF;
   padding: 20px 10px;
@@ -73,36 +104,24 @@ body {
 }
 
 .logo {
-  width: 20%;
+  max-width: 75px;
   position: absolute;
-  right: 3%;
-  top: 1%;
-}
-
-li {
-  list-style-type: none;
-  padding: 1%;
-}
-
-ul {
-  padding: 0% 5%;
+  right: 15px;
+  top: 7px;
 }
 
 .menu {
   margin-top: 15%;
   margin-left: 10%;
-  font-size: "Roboto Condensed";
+  font-size: Roboto Condensed;
 }
-
 .menu__checkbox {
   position: absolute;
   left: -9999px;
 }
-
 .menu__toggler {
   cursor: pointer;
 }
-
 .menu__list {
   display: none;
   margin: 0;
@@ -110,7 +129,10 @@ ul {
   list-style: none;
   background-color: #F8F7FF;
 }
-
+.menu__item {
+  list-style-type: none;
+  padding: 1%;
+}
 .menu__link {
   display: block;
   padding: 15px;
@@ -118,7 +140,6 @@ ul {
   color: #2C363F;
   margin-right: 15%;
 }
-
 .menu__link:hover {
   background-color: #F9DF74;
 }
@@ -127,56 +148,145 @@ ul {
   display: block;
 }
 
+.services__images {
+  display: none;
+}
+
 /*PC*/
 @media screen and (min-width: 640px) {
   .menu__toggler {
     display: none;
   }
 
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px;
+  }
   .menu__list {
     display: flex !important;
+    justify-content: space-between;
   }
-
+  .menu__item {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
   .menu__link {
-    padding: 25px;
-  }
-
-  .logo {
-    width: 6.5%;
+    padding: 1rem 0.5rem;
+    margin: 0;
+    display: block;
   }
 
   .header {
     display: flex;
     padding-bottom: 0;
-    /*flex-direction: column-reverse;
-    justify-content: center;*/
   }
 
-  .gas, .bottle, .coffee {
-    width: 50%;
-    padding: 0;
-    margin: 0;
+  .pricelist {
+    display: flex;
+    background-color: #F9DF74;
+    padding: 20px;
   }
 
-  .potrubi, .portret, .certificate {
-    width: 55%;
-    margin: auto;
-  }
-
-  .portret, .certificate {
-    width: 55%;
-    margin: auto;
-    /*flex-direction: column;*/
-  }
-
-  .yellow {
-    display: grid;
+  .yellow, .white {
     flex-direction: column;
-    padding-bottom: 0;
-    flex-basis: 50%;
+    padding: 10px;
   }
 
-  .yellow__first {
-    background-color: #2176FF;
+  .coffee {
+    max-width: 300px;
+    min-width: 150px;
+    margin: auto;
+    padding: 5px;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+
+  .table {
+    border-spacing: 0;
+    text-align: left;
+    padding: 5px;
+  }
+
+  h2 {
+    padding: 0;
+  }
+
+  .logo {
+    margin: 25px 100px;
+  }
+
+  .homepage {
+    display: flex;
+    background-color: #F9DF74;
+    flex-direction: row-reverse;
+  }
+  .homepage__box {
+    padding-top: 25px;
+  }
+
+  .potrubi,
+.certificate,
+.portret,
+.calling {
+    min-width: 300px;
+    max-width: 450px;
+    margin: auto;
+  }
+
+  .services {
+    display: flex;
+  }
+  .services__box {
+    display: flex;
+    flex-basis: 33.3333333333%;
+  }
+  .services__images {
+    max-width: 45%;
+    min-width: 25%;
+    display: flex;
+    margin: auto;
+    flex-grow: 1;
+    flex-basis: 25;
+    align-items: stretch;
+  }
+
+  .gas,
+.bottle {
+    display: none;
+  }
+
+  .aboutme {
+    display: flex;
+    flex-basis: 49%;
+    flex-grow: 1;
+  }
+  .aboutme__box1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .aboutme__box2 {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-basis: 50;
+  }
+
+  .contact {
+    display: flex;
+    flex-basis: 49%;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+  }
+  .contact__box1 {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  input {
+    padding: 3px;
+    margin: 7px;
   }
 }/*# sourceMappingURL=style.css.map */
