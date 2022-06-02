@@ -14,14 +14,6 @@ html {
   $font-special: Roboto Condensed;
   $font-unique: Smooch;
 
-  @mixin title {
-      color: $black;
-      font-family: $font-unique;
-      padding-top: 5px;
-      font-style: italic;
-      font-size: 25px;
-      margin: 0% 10%;
-  }
 
   /*mobile*/
   .header {
@@ -50,6 +42,8 @@ html {
     margin: 10px 15px;
     font-size: 12px;
     font-family: $font-special;
+    overflow: hidden;
+    position: relative;
   }
   .table {
     border-spacing: 0;
@@ -77,7 +71,7 @@ html {
 .aboutme__box1, 
 .contact__box1, 
 .contact__box2{
-    padding-top: 5px;
+    padding-top: 3px;
 }
 .services__items{
     text-align: left;
@@ -178,6 +172,10 @@ html {
         margin: 0;
         display: block;
       }
+      &--active, &--visited {
+        background-color: $yellow;
+      }
+
     }
 
     .header {
@@ -230,7 +228,7 @@ html {
       max-width: 450px;
       margin: auto;
     }
-
+  
     .services{
       display: flex;
       &__box{
@@ -271,16 +269,54 @@ html {
       display: flex;
       flex-basis: 49%;
       flex-grow: 1;
-      flex-direction: row-reverse;
+      flex-direction: row;
       &__box1{
         display: flex;
         flex-direction: column;
-        padding: 30px;
+        padding: 5px;
+        width: 50%;
       }
+    .form{
+      margin-left: 25px;
+      padding: 25x;
+    }
     }
 
-    input{
-      padding: 3px;
-      margin: 7px;
+    label,
+    input {
+      width: 80%;
+    }
+    .form-field input{
+        width: 100%;
+        border: 1px solid $blue;
+    } 
+
+    input {
+      margin-bottom: 1rem;
+      margin: 5px;
+      padding: 5px;
+      color: $black;
+      
+    }
+    input[type=submit] {
+      background-color: $blue;
+      color: $white;
+      border-color: $white;
     }
    }
+//deskop
+   @media screen and (min-width: 1020px){
+    .homepage,
+    .pricelist,
+    .aboutme,
+    .services,
+    .contact{
+      margin: 30px 300px; 
+    }
+    .menu,
+    .title,
+    .logo{
+      margin: 20px 300px;
+    }
+   }
+

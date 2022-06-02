@@ -37,6 +37,8 @@ footer {
   margin: 10px 15px;
   font-size: 12px;
   font-family: Roboto Condensed;
+  overflow: hidden;
+  position: relative;
 }
 
 .table {
@@ -69,7 +71,7 @@ td {
 .aboutme__box1,
 .contact__box1,
 .contact__box2 {
-  padding-top: 5px;
+  padding-top: 3px;
 }
 
 .services__items {
@@ -178,6 +180,9 @@ body {
     margin: 0;
     display: block;
   }
+  .menu--active, .menu--visited {
+    background-color: #F9DF74;
+  }
 
   .header {
     display: flex;
@@ -277,16 +282,54 @@ body {
     display: flex;
     flex-basis: 49%;
     flex-grow: 1;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
   .contact__box1 {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 5px;
+    width: 50%;
+  }
+  .contact .form {
+    margin-left: 25px;
+    padding: 25x;
+  }
+
+  label,
+input {
+    width: 80%;
+  }
+
+  .form-field input {
+    width: 100%;
+    border: 1px solid #2176FF;
   }
 
   input {
-    padding: 3px;
-    margin: 7px;
+    margin-bottom: 1rem;
+    margin: 5px;
+    padding: 5px;
+    color: #2C363F;
+  }
+
+  input[type=submit] {
+    background-color: #2176FF;
+    color: #F8F7FF;
+    border-color: #F8F7FF;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .homepage,
+.pricelist,
+.aboutme,
+.services,
+.contact {
+    margin: 30px 300px;
+  }
+
+  .menu,
+.title,
+.logo {
+    margin: 20px 300px;
   }
 }/*# sourceMappingURL=style.css.map */
